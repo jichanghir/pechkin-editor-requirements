@@ -241,6 +241,7 @@
     <li>text-align</li>
     <li>color</li>
     <li>background-color</li>
+    <li>text-align Обратите внимание, что позиционирование текста задается стилем text-align в самом теге p или h1~, а не в родительском td</li>
   </ul>
   <p>Дополниельно (внутрь тэгов p или h1~):</p>
   <ul>
@@ -252,6 +253,210 @@
     <li>Для добавление background-color тексту оборачиваем его в &lt;span style=&quot;background-color: #fff;&quot;&gt;&lt;/span&gt;</li>
     <li>Для изменения размера текста &lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;/font&gt;</li>
     <li>Также можно текст оборачивать в тэг &lt;a href=&quot;&quot;&gt;&lt;/a&gt;</li>
+  </ul>
+
+</section>
+
+<section>
+  <p style="font-size: 14px"> 2.3.2 <b>Элемент изображения</b></p>
+  <p> Каждый элемент изображения имеет обязательную следующую структуру :</p>
+
+  <div class="html-text">
+    <pre>
+
+      &lt;table border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; width: 100%; max-width: 100%; table-layout: fixed;&quot; class=&quot;ed-elements-element ed-img-element&quot;&gt;
+        &lt;tr&gt;
+          &lt;td style=&quot;text-align: center; vertical-align: top;&quot;&gt;
+
+            &lt;img src=&quot;http://pics.mlwheel.net/editor/assets/minimalist-basic/o01-1.jpg&quot; alt=&quot;&quot; style=&quot;display: block; max-width: 100%; width: 100%; margin: 0 auto;&quot; /&gt;
+
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+
+    </pre>
+  </div>
+
+  <p><span class="important">ВАЖНО</span></p>
+  <p>Каждый Элемент изображения может содержать только один тег img, и больше ничего</p>
+
+  <p>Элементу изображения обязательно следует задать следующие стили:</p>
+  <ul>
+    <li>display: block (задается тегу IMG)</li>
+    <li>max-width: 100% (задается тегу IMG)</li>
+    <li>Позиционирование картинки: text-align (задается тегу TD и в атрибут align тега TD вписывается соответствующее значение) + в сам тег IMG дописывается стиль float cо значениями left, right или margin: 0 auto если у родительского тега TD стиль text-align и атрибут align будут иметь значения center</li>
+    <li>width (задается тегу IMG) Задается в px или в %.</li>
+  </ul>
+
+  <p>Также элементу изображения можно задавать дополнительно:</p>
+  <ul>
+    <li>border-radius (задается тегу IMG) Задается в px</li>
+    <li>padding-top (задается тегу TD) Задается в px</li>
+    <li>padding-right (задается тегу TD) Задается в px</li>
+    <li>padding-bottom (задается тегу TD) Задается в px</li>
+    <li>padding-left (задается тегу TD) Задается в px</li>
+  </ul>
+
+  <p>также картинку можно обернуть тегом A, сделав картинку ссылкой. Например:</p>
+
+  <div class="html-text">
+    <pre>
+      
+      &lt;a href=&quot;#sdsd&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%;&quot;&gt;
+        &lt;img src=&quot;http://pics.mlwheel.net/editor/assets/minimalist-basic/o01-1.jpg&quot; alt=&quot;image&quot; style=&quot;display: block; max-width: 100%; width: 100%; margin: 0 auto;&quot;&gt;
+      &lt;/a&gt;
+
+    </pre>
+  </div>
+
+  <p>При этом тегу A стоит обязательно указать target=&quot;_blank&quot; и задать следующие стили:</p>
+  <ul>
+    <li>display: block;</li>
+    <li>width: 100%;</li>
+    <li>height: 100%;</li>
+  </ul>
+  
+
+</section>
+
+<section>
+  <p style="font-size: 14px"> 2.3.2 <b>Элемент кнокпи</b></p>
+  <p> Каждый элемент кнопки имеет обязательную следующую структуру :</p>
+
+  <div class="html-text">
+    <pre>
+
+      &lt;table border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; width: 100%; max-width: 100%; table-layout: fixed;&quot; class=&quot;ed-elements-element ed-btn-element&quot;&gt;
+        &lt;tr&gt;
+          &lt;td style=&quot;text-align: center; vertical-align: top; padding:10px&quot;&gt;
+
+            &lt;a href=&quot;#&quot;&gt;
+              &lt;span style=&quot;display: inline-block; background-color: #08c9b9; line-height: 37px; width: 170px; max-width: 100%; margin: 0; padding: 0; cursor: pointer; color:#ffffff; font-family: Arial,sans-serif; font-size: 16px; font-weight: normal; text-align: center; text-decoration: none; border-radius: 6px;&quot;&gt;
+                Read More
+              &lt;/span&gt;                                    
+            &lt;/a&gt;
+
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+
+    </pre>
+  </div>
+
+  <p><span class="important">ВАЖНО</span></p>
+  <p>Каждый Элемент кнопки может содержать только один тег A и один вложенный в него SPAN, и больше ничего</p>
+
+  <p>Элементу изображения обязательно следует задать следующие стили:</p>
+  <ul>
+    <li>text-align: (задается тегу TD и в атрибут align тега TD вписывается соответствующее значение) и задает позиционирование кнопки. Допустимы значения left, right, center</li>
+    <li>display: inline-block; (задается тегу SPAN) </li>
+    <li>background-color (задается тегу SPAN) Указывает на цвет кнопки</li>
+    <li>line-height (задается тегу SPAN) Задается в px. Указывает на высоту кнопки </li>
+    <li>width (задается тегу SPAN) Задается в px. Указывает на ширину кнопки </li>
+    <li>max-width: 100%; (задается тегу SPAN)</li>
+    <li>margin: 0; (задается тегу SPAN)</li>
+    <li>padding: 0; (задается тегу SPAN)</li>
+    <li>cursor:pointer; (задается тегу SPAN)</li>
+    <li>color (задается тегу SPAN) Указывает на цвет текста кнопки</li>
+    <li>font-size (задается тегу SPAN) Задается в px</li>
+    <li>font-weight (задается тегу SPAN) Допусимые значения normal или bold</li>
+    <li>text-decoration: none;</li>
+    <li>font-family</li>
+  </ul>
+
+  <p>Также элементу кнопки можно задавать дополнительно:</p>
+  <ul>
+    <li>text-decoration</li>
+    <li>border-radius</li>
+  </ul>
+
+  <p>тегу A можно по желанию задать target=&quot;_blank&quot;</p>
+
+</section>
+
+<section>
+  <p style="font-size: 14px"> 2.3.2 <b>Элемент Социальные сети</b></p>
+  <p> Каждый элемент Социальные сети имеет обязательную следующую структуру :</p>
+
+  <div class="html-text">
+    <pre>
+
+      table border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; width: 100%; max-width: 100%; table-layout: fixed;&quot; class=&quot;ed-elements-element ed-social-element&quot;&gt;
+        &lt;tr&gt;
+          &lt;td class=&quot;soc_td_inner&quot; style=&quot;text-align: center; vertical-align: top;&quot;&gt;
+
+            &lt;!-- Тело элемента --&gt;
+
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+
+    </pre>
+  </div>
+
+  <p>Позиционирование задается в тэге TD стилем text-align, с допустимыми значенимя left, center или right</p>
+
+  <p>Каждый значок соц-сетей вставляется в &lt;!-- Тело элемента --&gt; и имеет следующую обязательную структуру:</p>
+
+  <div class="html-text">
+    <pre>
+      
+      &lt;table style=&quot;border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; display: inline-block;&quot;  border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+        &lt;tr&gt;
+          &lt;td width=&quot;10&quot;&gt;&lt;/td&gt;
+
+          &lt;td style=&quot;text-align: center; padding-top: 10px; padding-bottom: 10px;&quot;&gt;
+            &lt;span class=&quot;fifth twitter_block&quot;&gt;
+              &lt;a href=&quot;https://twitter.com/&quot; target=&quot;_blank&quot;&gt;
+                &lt;img src=&quot;http://66916.selcdn.com/pechkin_static/social/cl_cr_twitter.png&quot; alt=&quot;&quot; style=&quot;border: none; vertical-align: middle; width:40px;&quot;&gt;
+              &lt;/a&gt;
+            &lt;/span&gt;
+          &lt;/td&gt;
+
+          &lt;td width=&quot;10&quot;&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+
+    </pre>
+  </div>
+
+  <p>Расстояние между иконками задается в первом и последнем тегах TD в атребуте width, и ОБЯЗАТЕЛЬНО должна быть одинаковой для всех сторон для всех иконок</p>
+  <p>Тег IMG у каждой иконки должен иметь обязательные следующие стили:</p>
+  <ul>
+    <li>border: none;</li>
+    <li>vertical-align: middle;</li>
+    <li>width Задает ширину иконки, и ОБЯЗАТЕЛЬНО должнен быть одинаковым для всех иконок. Допустимые значения: 16px, 24px, 40px, 80px</li>
+  </ul>
+
+  <p>тег SPAN с классом fifth, имеет дополнительный класс (в примере twitter_block). Название этого класса формируется как название иконки (в примере twitter) плюс _block</p>
+  <p>Допустимые значения для классов иконок:</p>
+  <ul>
+    <li>pinterest_block</li>
+    <li>youtube_block</li>
+    <li>yelp_block</li>
+    <li>googleplus_block</li>
+    <li>stumbleupon_block</li>
+    <li>reddit_block</li>
+    <li>soundcloud_block</li>
+    <li>amazon_block</li>
+    <li>evernote_block</li>
+    <li>vimeo_block</li>
+    <li>foursquare_block</li>
+    <li>twitter_block</li>
+    <li>behance_block</li>
+    <li>instagram_block</li>
+    <li>digg_block</li>
+    <li>linkedin_block</li>
+    <li>facebook_block</li>
+    <li>tumblr_block</li>
+    <li>yahoo_block</li>
+    <li>flickr_block</li>
+    <li>dribbble_block</li>
+    <li>wordpress_block</li>
+    <li>deviantart_block</li>
+    <li>vkontakte_block</li>
+    <li>odn_block</li>
+    <li>email_block</li>
   </ul>
 
 </section>
