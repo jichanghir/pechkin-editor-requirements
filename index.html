@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	
+	<h1 class="center"> ТРЕБОВАНИЯ К ВЕРСТКЕ РЕДАКТОРА</h1>
+
+  <section>
+   <p style="font-size: 20px"> 1. Стили </p>
+   <p> Все стили перечисленные ниже должны обязательно находиться в теге HEAD. Все остальные стили добавляются только инлайн стилями. Больше никакие стили в тег STYLE не должны быть вписаны и не будут учтены</p>
+
+  <div class="html-text">
+  <pre>
+
+    &lt;style&gt;
+      body {height:100%!important; margin:0; padding:0; width:100%!important;}
+      table{border-collapse:collapse;}
+      img,a img{border:0; outline:none; text-decoration:none;}
+      h1,h2,h3,h4,h5,h6{margin:0; padding:0;}
+      p{margin:0; padding:0;}
+      a{word-wrap:break-word;}
+      table,td{mso-table-lspace:0pt; mso-table-rspace:0pt;}
+      img{-ms-interpolation-mode:bicubic;}
+      body,table,td,p,a,li,blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;}
+
+      .content{background-color:#ffffff;}
+      .newsletter{margin:0 auto; max-width:600px;}
+      .wrapper{width:100%; table-layout:fixed; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;}
+      #contentarea{font-family: Arial, sans-serif; width: 100% !important;}
+
+      .ed-elements-column {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    @media screen and (min-width: 600px) {
+      #contentarea {width: 600px !important; max-width: 600px !important;}
+      .ed-elements-column-50 {
+      width: 50% !important;
+      max-width: 50% !important;
+    }
+
+    .ed-elements-column-33 {
+      width: 33.3% !important;
+      max-width: 33.3% !important;
+    }
+
+    .ed-elements-column-25 {
+      width: 25% !important;
+      max-width: 25% !important;
+    }
+
+    .ed-elements-column-66 {
+      width: 66.6% !important;
+      max-width: 66.6% !important;
+    }
+
+    }
+    [owa] .ed-elements-column-50 {
+      width: 50% !important;
+      max-width: 50% !important;
+    }
+    [owa] .ed-elements-column-33 {
+      width: 33.3% !important;
+      max-width: 33.3% !important;
+    }
+    [owa] .ed-elements-column-25 {
+      width: 25% !important;
+      max-width: 25% !important;
+    }
+    [owa] .ed-elements-column-66 {
+      width: 66.6% !important;
+      max-width: 66.6% !important;
+    }
+    &lt;/style&gt;
+
+  </pre>
+  </div>
+
+</section>
+
+<section>
+  <p style="font-size: 20px"> 2. Верстка</p>
+  <p style="font-size: 16px"> 2.1 <b>Основная обертка</b></p>
+  <p> Блок приведенный ниже является обязательным и неизменяемым. Все остальные блоки и элементы будут помещаться внутрь</p>
+
+  <div class="html-text">
+  <pre>
+
+    &lt;div align=&quot;center&quot; class=&quot;wrapper&quot; id=&quot;content_wrap&quot; style=&quot;background:none&quot;&gt;
+
+      &lt;!--[if (gte mso 9)|(IE)]&gt;&lt;table align=&quot;center&quot; width=&quot;600&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; width:600px; margin:0 auto; background-image: none; background-color: #ffffff; min-height: 50px;&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;![endif]--&gt;
+      &lt;table class=&quot;newsletter&quot; align=&quot;center&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;background:none !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;&quot;&gt;
+        &lt;tr&gt;
+          &lt;td class=&quot;content&quot;&gt;
+            &lt;div id=&quot;contentarea&quot; style=&quot;width: 600px; margin: 0px auto; background-image: none; background-color: rgb(255, 255, 255); min-height: 50px; zoom: 1;&quot;&gt;
+
+              &lt;!-- Тело письма --&gt;
+
+            &lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+
+      &lt;/table&gt;
+      &lt;!--[if (gte mso 9)|(IE)]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+
+    &lt;/div&gt;
+
+  </pre>
+  </div>
+
+</section>
+
+<section>
+  <p style="font-size: 16px"> 2.2 <b>Блоки</b></p>
+  <p> Каждый блок вставляется в тело письма. Каждый блок имеет обязательную следующую структуру :</p>
+
+  <div class="html-text">
+  <pre>
+
+    &lt;div class=&quot;column full&quot;&gt;
+
+        &lt;table border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; width: 100%; max-width: 100%; table-layout: fixed;&quot; class=&quot;ed-elements-block&quot;&gt;
+            &lt;tr&gt;
+                &lt;td style=&quot;text-align: left; vertical-align: top;&quot;&gt; 
+
+                  &lt;!-- Тело блока --&gt;
+
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+
+    &lt;/div&gt;
+
+  </pre>
+  </div>
+
+  <p>Блоку можно задавать следующие стили:</p>
+  <ul>
+    <li>background-color (задается тегу TABLE) Также обязательно если задается стиль background-color то дописыать тому же тегу TABLE атрибут bgcolor с тем же значением. Запрещено задавать значения rgb, hsl.</li>
+    <li>background-image (задается тегу TABLE) Также обязательно если задается стиль background-image то дописыать тому же тегу TABLE атрибут background с тем же значением.</li>
+    <li>background-position (задается тегу TABLE) Возможны значения: left right (по горизонтали), top bottom (по вертикали), 50% для обоих направлений.</li>
+    <li>background-repeat (задается тегу TABLE) Возможны значения: no-repeat, repeat-x, repeat-y, repeat</li>
+    <li>background-size (задается тегу TABLE) Возможны значения: auto auto, contain, auto 100%, 100% auto</li>
+    <li>border-style (задается тегу TD) Возможны значения: solid, dashed, dotted, double, groove, ridge, inset, outset</li>
+    <li>border-color (задается тегу TD) </li>
+    <li>border-width (задается тегу TD) Задается в px</li>
+    <li>padding-top (задается тегу TD) Задается в px</li>
+    <li>padding-right (задается тегу TD) Задается в px</li>
+    <li>padding-bottom (задается тегу TD) Задается в px</li>
+    <li>padding-left (задается тегу TD) Задается в px</li>
+  </ul>
+
+  
+  <p><span class="important">ВАЖНО</span></p>
+  Eсли задается background-image, то все содержимое блока оборачивается следующей конструкцией, приведенной ниже. Обратите внимание, в обертке ниже обязательно задайте высоту, равную высоте TABLE у которого указывали background-image, и обязательно задайте src с адресом картинки
+
+  <div class="html-text">
+  <pre>
+
+    &lt;!--[if (mso)|(IE)]&gt;&lt;v:rect xmlns:v=&quot;urn:schemas-microsoft-com:vml&quot; fill=&quot;true&quot; stroke=&quot;false&quot; style=&quot;width:600px; height:272px; background-position: center center !important;&quot;&gt;&lt;v:fill type=&quot;tile&quot; src=&quot;url-img.jpg&quot; color=&quot;#ffffff&quot; &gt;&lt;/v:fill&gt;&lt;v:textbox inset=&quot;0,0,0,0&quot;&gt;&lt;![endif]--&gt;
+
+      &lt;!-- Тело блока --&gt;
+
+    &lt;!--[if (mso)|(IE)]&gt;&lt;/v:textbox&gt;&lt;/v:rect&gt;&lt;![endif]--&gt;
+
+  </pre>
+  </div>
+
+  <p><span class="important">СОВЕТ</span></p>
+  <p>стили background-image используйте крайне редко, и только тогда, когда нет другого выхода.</p>
+  <br>
+  <p><span class="important">ВАЖНО</span></p>
+  <p>стили background-image можно задать только блоку. Остальным элементам письма или самому письму background-image задать нельзя</p>
+
+
+</section>
+
+<section>
+  <p style="font-size: 16px"> 2.3 <b>Элементы</b></p>
+  <p style="font-size: 14px"> 2.3.1 <b>Текстовый элемент</b></p>
+  <p> Каждый элемент вставляется в тело блока. Каждый текстовый элемент имеет обязательную следующую структуру :</p>
+
+  <div class="html-text">
+  <pre>
+
+    &lt;table border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; width: 100%; max-width: 100%; table-layout: fixed;&quot; class=&quot;ed-elements-element ed-text-element&quot;&gt;
+      &lt;tr&gt;
+        &lt;td style=&quot;text-align: left; vertical-align: top;&quot;&gt;
+
+          &lt;!-- Тело элемента --&gt;
+
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+
+  </pre>
+  </div>
+
+  <p>Текстовому элементу можно задавать следующие стили:</p>
+  <ul>
+    <li>color (задается тегу TD) Задается в px </li>
+    <li>line-height (задается тегу TD) Задается в em. Возможные значения: 1em, 1.2em, 1.5em, 2em, 2.5em, 3em </li>
+    <li>border-style (задается тегу TD) Возможны значения: solid, dashed, dotted, double, groove, ridge, inset, outset</li>
+    <li>border-color (задается тегу TD) </li>
+    <li>border-width (задается тегу TD) Задается в px</li>
+    <li>padding-top (задается тегу TD) Задается в px</li>
+    <li>padding-right (задается тегу TD) Задается в px</li>
+    <li>padding-bottom (задается тегу TD) Задается в px</li>
+    <li>padding-left (задается тегу TD) Задается в px</li>
+  </ul>
+
+</section>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
